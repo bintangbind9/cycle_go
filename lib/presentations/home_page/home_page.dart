@@ -3,7 +3,7 @@ import 'package:cyclego/constants/app_images.dart';
 import 'package:cyclego/constants/styles.dart';
 import 'package:cyclego/presentations/home_page/greeting_widget.dart';
 import 'package:cyclego/presentations/home_page/main_banner_widget.dart';
-import 'package:cyclego/presentations/shared_widgets/primay_button_widget.dart';
+import 'package:cyclego/presentations/shared_widgets/primary_button_widget.dart';
 import 'package:cyclego/presentations/shared_widgets/radio_text_widget.dart';
 import 'package:cyclego/utils/extensions/sized_box.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                60.sizedBoxHeight,
+                Styles.mainTopPadding.sizedBoxHeight,
                 const GreetingWidget(),
                 const MainBannerWidget(),
                 const RadioTextWidget(

@@ -1,4 +1,5 @@
 import 'package:cyclego/constants/constants.dart';
+import 'package:cyclego/presentations/home_page/rental_explore_page/rental_explore_page.dart';
 import 'package:cyclego/utils/extensions/sized_box.dart';
 import 'package:flutter/material.dart';
 
@@ -16,70 +17,81 @@ class MainBannerWidget extends StatelessWidget {
             vertical: 20,
             horizontal: Styles.mainPadding,
           ),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: 200,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(Styles.mainRadius),
-              gradient: const LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: AppColors.gradientSecondary,
+          child: Material(
+            type: MaterialType.transparency,
+            child: InkWell(
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const RentalExplorePage(),
+                ),
               ),
-            ),
-            child: Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
-                        width: 120,
-                        child: Text(
-                          'Rental Explore',
-                          style: TextStyle(
-                            color: AppColors.white,
-                            fontSize: 28,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                      ),
-                      10.sizedBoxHeight,
-                      const Row(
+              borderRadius: BorderRadius.circular(Styles.mainRadius),
+              child: Ink(
+                width: MediaQuery.of(context).size.width,
+                height: 200,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(Styles.mainRadius),
+                  gradient: const LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: AppColors.gradientSecondary,
+                  ),
+                ),
+                child: Stack(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            '127',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.white,
+                          const SizedBox(
+                            width: 120,
+                            child: Text(
+                              'Rental Explore',
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: 28,
+                                fontWeight: FontWeight.w800,
+                              ),
                             ),
                           ),
-                          Text(
-                            ' near you',
-                            style: TextStyle(
-                              color: AppColors.white,
-                            ),
+                          10.sizedBoxHeight,
+                          const Row(
+                            children: [
+                              Text(
+                                '127',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.white,
+                                ),
+                              ),
+                              Text(
+                                ' near you',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                ),
+                              ),
+                            ],
                           ),
+                          const Icon(
+                            Icons.arrow_forward,
+                            color: AppColors.white,
+                          )
                         ],
                       ),
-                      const Icon(
-                        Icons.arrow_forward,
-                        color: AppColors.white,
-                      )
-                    ],
-                  ),
+                    ),
+                    Positioned(
+                      top: 24,
+                      right: 16,
+                      child: Image.asset(
+                        AppImages.whitePoints,
+                        height: 100,
+                      ),
+                    ),
+                  ],
                 ),
-                Positioned(
-                  top: 24,
-                  right: 16,
-                  child: Image.asset(
-                    AppImages.whitePoints,
-                    height: 100,
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
         ),
