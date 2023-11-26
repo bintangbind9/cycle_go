@@ -1,6 +1,6 @@
 # cyclego
 
-A new Flutter project.
+Slicing UI from https://uiuxbunker.gumroad.com/l/cyclego
 
 ## Getting Started
 
