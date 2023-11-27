@@ -1,0 +1,29 @@
+{
+    "name": "Bike of Murjiem",
+    "address": "Shop 7/54 ...",
+    "distance": 1500,
+    "rating": 4,
+    "isOpen": true,
+    "ready": 86,
+    "booked": 24,
+    "inUse": 93,
+    "picture": "pict",
+    "pictureBackgroundRgbColor": {
+        "r": 1,
+        "g": 2,
+        "b": 3
+    },
+    "bikes": [
+        {
+            "name": "Wagon Pro 3",
+            "type": "Cargo Bike",
+            "rentCost": 4.5,
+            "picture": "pict",
+            "pictureBackgroundRgbColor": {
+                "r": 1,
+                "g": 2,
+                "b": 3
+            }
+        }
+    ]
+}

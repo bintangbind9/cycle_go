@@ -11,4 +11,6 @@ class AppImages {
   static const String personCycle5 = 'assets/images/person_cycle_5.png';
   static const String personCycle6 = 'assets/images/person_cycle_6.png';
   static const String personCycle7 = 'assets/images/person_cycle_7.png';
+  static const String heartFilled = 'assets/images/heart_filled.png';
+  static const String heartNoFill = 'assets/images/heart_no_fill.png';
 }

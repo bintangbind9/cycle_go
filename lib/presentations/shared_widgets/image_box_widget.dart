@@ -1,3 +1,4 @@
+import 'package:cyclego/constants/styles.dart';
 import 'package:flutter/material.dart';
 
 class ImageBoxWidget extends StatelessWidget {
@@ -20,7 +21,7 @@ class ImageBoxWidget extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(Styles.subRadius),
         color: color,
       ),
       child: Padding(

@@ -11,13 +11,19 @@ class AppColors {
   static const List<Color> gradientPrimary = [purple, lightPurple];
   static const List<Color> gradientSecondary = [lightPurple, purple];
 
+  static const Color backgroundSuccess = Color.fromRGBO(216, 246, 217, 1);
+  static const Color foregroundSuccess = Color.fromRGBO(126, 172, 124, 1);
+  static const Color backgroundDanger = Color.fromRGBO(240, 210, 211, 1);
+  static const Color foregroundDanger = Color.fromRGBO(185, 138, 138, 1);
+
   static const Color orange = Color.fromRGBO(236, 149, 119, 1);
-  static const Color lightOrange = Color.fromRGBO(247, 205, 189, 1);
+  static const Color lightOrange = Color.fromRGBO(247, 205, 189, 0.053);
 
   static const Color yellowBackgroundImage = Color.fromRGBO(246, 219, 86, 1);
   static const Color whiteBackgroundImage = Color.fromRGBO(239, 239, 239, 1);
   static const Color greenBackgroundImage = Color.fromRGBO(172, 212, 178, 1);
   static const Color blueBackgroundImage = Color.fromRGBO(92, 201, 250, 1);
+  static const Color redBackgroundImage = Color.fromRGBO(249, 126, 126, 1);
 
   static const Color softBrown = Color.fromRGBO(249, 246, 242, 1);
   static const Color softPink = Color.fromRGBO(247, 241, 243, 1);
