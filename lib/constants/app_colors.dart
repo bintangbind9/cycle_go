@@ -17,7 +17,7 @@ class AppColors {
   static const Color foregroundDanger = Color.fromRGBO(185, 138, 138, 1);
 
   static const Color orange = Color.fromRGBO(236, 149, 119, 1);
-  static const Color lightOrange = Color.fromRGBO(247, 205, 189, 0.053);
+  static const Color lightOrange = Color.fromRGBO(247, 205, 189, 1);
 
   static const Color yellowBackgroundImage = Color.fromRGBO(246, 219, 86, 1);
   static const Color whiteBackgroundImage = Color.fromRGBO(239, 239, 239, 1);
@@ -28,4 +28,6 @@ class AppColors {
   static const Color softBrown = Color.fromRGBO(249, 246, 242, 1);
   static const Color softPink = Color.fromRGBO(247, 241, 243, 1);
   static const Color softGreen = Color.fromRGBO(243, 249, 247, 1);
+
+  static const Color yellowStar = Color.fromRGBO(239, 149, 117, 1);
 }

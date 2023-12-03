@@ -3,6 +3,7 @@ import 'package:cyclego/constants/styles.dart';
 import 'package:cyclego/models/bike.model.dart';
 import 'package:cyclego/models/rental.model.dart';
 import 'package:cyclego/models/rgb_color.model.dart';
+import 'package:cyclego/presentations/home_page/rental_overview_page/rental_overview_page.dart';
 import 'package:cyclego/presentations/shared_widgets/image_box_widget.dart';
 import 'package:cyclego/presentations/shared_widgets/label_widget.dart';
 import 'package:cyclego/presentations/shared_widgets/primary_button_widget.dart';
@@ -407,7 +408,7 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
                                     children: [
                                       Text(
                                         rental.distance! < 1000
-                                            ? '${rental.distance!} m'
+                                            ? '${rental.distance!.toInt()} m'
                                             : '${rental.distance! / 1000} km',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
@@ -481,7 +482,11 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
                                           ),
                                         ),
                                         PrimaryButtonWidget(
-                                          onPressed: () {},
+                                          onPressed: () => Navigator.of(context)
+                                              .push(MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      RentalOverviewPage(
+                                                          rental: rental))),
                                           text: 'View',
                                           width: 80,
                                           height: 36,
