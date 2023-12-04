@@ -30,6 +30,7 @@ class RentalExplorePage extends StatefulWidget {
 class _RentalExplorePageState extends State<RentalExplorePage> {
   RentalExploreFilter _filter = RentalExploreFilter.nearMe;
   int? _selectedIndex;
+  bool _onAnimatedContainerEnd = true;
 
   List<Rental> rentals = [
     Rental(
@@ -81,6 +82,72 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
             b: 242,
           ),
         ),
+        Bike(
+          name: 'City Runner X-1',
+          type: 'Utility Bike',
+          rentCost: 3,
+          picture: AppImages.cycle1,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 243,
+            g: 249,
+            b: 247,
+          ),
+        ),
+        Bike(
+          name: 'Rover Step-Thru',
+          type: 'Fat Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle3,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 247,
+            g: 241,
+            b: 243,
+          ),
+        ),
+        Bike(
+          name: 'Wagon Pro 3',
+          type: 'Cargo Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle2,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 249,
+            g: 246,
+            b: 242,
+          ),
+        ),
+        Bike(
+          name: 'City Runner X-1',
+          type: 'Utility Bike',
+          rentCost: 3,
+          picture: AppImages.cycle1,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 243,
+            g: 249,
+            b: 247,
+          ),
+        ),
+        Bike(
+          name: 'Rover Step-Thru',
+          type: 'Fat Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle3,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 247,
+            g: 241,
+            b: 243,
+          ),
+        ),
+        Bike(
+          name: 'Wagon Pro 3',
+          type: 'Cargo Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle2,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 249,
+            g: 246,
+            b: 242,
+          ),
+        ),
       ],
     ),
     Rental(
@@ -98,7 +165,41 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
         g: 219,
         b: 86,
       ),
-      bikes: [],
+      bikes: [
+        Bike(
+          name: 'City Runner X-1',
+          type: 'Utility Bike',
+          rentCost: 3,
+          picture: AppImages.cycle1,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 243,
+            g: 249,
+            b: 247,
+          ),
+        ),
+        Bike(
+          name: 'Rover Step-Thru',
+          type: 'Fat Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle3,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 247,
+            g: 241,
+            b: 243,
+          ),
+        ),
+        Bike(
+          name: 'Wagon Pro 3',
+          type: 'Cargo Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle2,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 249,
+            g: 246,
+            b: 242,
+          ),
+        ),
+      ],
     ),
     Rental(
       name: 'Bike of Murjinem',
@@ -149,6 +250,72 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
             b: 242,
           ),
         ),
+        Bike(
+          name: 'City Runner X-1',
+          type: 'Utility Bike',
+          rentCost: 3,
+          picture: AppImages.cycle1,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 243,
+            g: 249,
+            b: 247,
+          ),
+        ),
+        Bike(
+          name: 'Rover Step-Thru',
+          type: 'Fat Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle3,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 247,
+            g: 241,
+            b: 243,
+          ),
+        ),
+        Bike(
+          name: 'Wagon Pro 3',
+          type: 'Cargo Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle2,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 249,
+            g: 246,
+            b: 242,
+          ),
+        ),
+        Bike(
+          name: 'City Runner X-1',
+          type: 'Utility Bike',
+          rentCost: 3,
+          picture: AppImages.cycle1,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 243,
+            g: 249,
+            b: 247,
+          ),
+        ),
+        Bike(
+          name: 'Rover Step-Thru',
+          type: 'Fat Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle3,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 247,
+            g: 241,
+            b: 243,
+          ),
+        ),
+        Bike(
+          name: 'Wagon Pro 3',
+          type: 'Cargo Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle2,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 249,
+            g: 246,
+            b: 242,
+          ),
+        ),
       ],
     ),
     Rental(
@@ -166,7 +333,41 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
         g: 126,
         b: 126,
       ),
-      bikes: [],
+      bikes: [
+        Bike(
+          name: 'City Runner X-1',
+          type: 'Utility Bike',
+          rentCost: 3,
+          picture: AppImages.cycle1,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 243,
+            g: 249,
+            b: 247,
+          ),
+        ),
+        Bike(
+          name: 'Rover Step-Thru',
+          type: 'Fat Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle3,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 247,
+            g: 241,
+            b: 243,
+          ),
+        ),
+        Bike(
+          name: 'Wagon Pro 3',
+          type: 'Cargo Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle2,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 249,
+            g: 246,
+            b: 242,
+          ),
+        ),
+      ],
     ),
     Rental(
       name: 'Rivero Bike',
@@ -183,7 +384,41 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
         g: 212,
         b: 178,
       ),
-      bikes: [],
+      bikes: [
+        Bike(
+          name: 'City Runner X-1',
+          type: 'Utility Bike',
+          rentCost: 3,
+          picture: AppImages.cycle1,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 243,
+            g: 249,
+            b: 247,
+          ),
+        ),
+        Bike(
+          name: 'Rover Step-Thru',
+          type: 'Fat Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle3,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 247,
+            g: 241,
+            b: 243,
+          ),
+        ),
+        Bike(
+          name: 'Wagon Pro 3',
+          type: 'Cargo Bike',
+          rentCost: 4.5,
+          picture: AppImages.cycle2,
+          pictureBackgroundRgbColor: RgbColor(
+            r: 249,
+            g: 246,
+            b: 242,
+          ),
+        ),
+      ],
     ),
   ];
 
@@ -196,6 +431,12 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
   void setFilter(RentalExploreFilter filter) {
     setState(() {
       _filter = filter;
+    });
+  }
+
+  void setAnimatedContainerEnd(bool value) {
+    setState(() {
+      _onAnimatedContainerEnd = value;
     });
   }
 
@@ -320,11 +561,19 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
 
                 return GestureDetector(
                   onTap: () {
-                    if (rental.isOpen!) {
+                    if (rental.isOpen! && _selectedIndex != index) {
+                      setAnimatedContainerEnd(false);
                       selectItem(index);
                     }
                   },
-                  child: Container(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.fastOutSlowIn,
+                    onEnd: () {
+                      setState(() {
+                        setAnimatedContainerEnd(true);
+                      });
+                    },
                     margin: const EdgeInsets.only(
                       left: Styles.mainPadding,
                       bottom: Styles.mainPadding,
@@ -435,9 +684,8 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
                             ),
                           ],
                         ),
-                        _selectedIndex != index
-                            ? const SizedBox()
-                            : Container(
+                        _selectedIndex == index && _onAnimatedContainerEnd
+                            ? Container(
                                 padding: const EdgeInsets.symmetric(
                                   vertical: 0,
                                   horizontal: Styles.mainPadding,
@@ -495,7 +743,8 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
                                     ),
                                   ],
                                 ),
-                              ),
+                              )
+                            : const SizedBox(),
                       ],
                     ),
                   ),
