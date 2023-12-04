@@ -5,11 +5,97 @@ import 'package:flutter/material.dart';
 
 import '../shared_widgets/image_box_widget.dart';
 
-class MainBannerWidget extends StatelessWidget {
+class MainBannerWidget extends StatefulWidget {
   const MainBannerWidget({super.key});
 
   @override
+  State<MainBannerWidget> createState() => _MainBannerWidgetState();
+}
+
+class _MainBannerWidgetState extends State<MainBannerWidget>
+    with TickerProviderStateMixin {
+  late AnimationController _controller1;
+  late AnimationController _controller2;
+  late Animation<Offset> _xAnimation1;
+  late Animation<Offset> _yAnimation1;
+  late Animation<Offset> _xAnimation2;
+  late Animation<Offset> _yAnimation2;
+  late Animation<Offset> _xAnimation3;
+  late Animation<Offset> _yAnimation3;
+  late Animation<Offset> _xAnimation4;
+  late Animation<Offset> _yAnimation4;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller1 = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    );
+
+    _controller2 = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
+
+    _xAnimation1 = Tween<Offset>(
+      begin: const Offset(-0.04, 0),
+      end: const Offset(0.04, 0),
+    ).animate(_controller1);
+
+    _yAnimation1 = Tween<Offset>(
+      begin: const Offset(0, -0.04),
+      end: const Offset(0, 0.04),
+    ).animate(_controller2);
+
+    _xAnimation2 = Tween<Offset>(
+      begin: const Offset(-0.02, 0),
+      end: const Offset(0.02, 0),
+    ).animate(_controller2);
+
+    _yAnimation2 = Tween<Offset>(
+      begin: const Offset(0, -0.02),
+      end: const Offset(0, 0.02),
+    ).animate(_controller1);
+
+    _xAnimation3 = Tween<Offset>(
+      begin: const Offset(-0.06, 0),
+      end: const Offset(0.06, 0),
+    ).animate(_controller1);
+
+    _yAnimation3 = Tween<Offset>(
+      begin: const Offset(0, -0.06),
+      end: const Offset(0, 0.06),
+    ).animate(_controller2);
+
+    _xAnimation4 = Tween<Offset>(
+      begin: const Offset(-0.03, 0),
+      end: const Offset(0.03, 0),
+    ).animate(_controller2);
+
+    _yAnimation4 = Tween<Offset>(
+      begin: const Offset(0, -0.03),
+      end: const Offset(0, 0.03),
+    ).animate(_controller1);
+  }
+
+  @override
+  void dispose() {
+    _controller1.dispose();
+    _controller2.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    _controller1
+      ..reset()
+      ..repeat(reverse: true);
+
+    _controller2
+      ..reset()
+      ..repeat(reverse: true);
+
     return Stack(
       children: [
         Padding(
@@ -98,45 +184,69 @@ class MainBannerWidget extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width,
           height: 240,
-          child: const Stack(
+          child: Stack(
             children: [
               Positioned(
                 right: 8,
-                child: ImageBoxWidget(
-                  width: 80,
-                  height: 80,
-                  image: AppImages.personCycle1,
-                  color: AppColors.whiteBackgroundImage,
+                child: SlideTransition(
+                  position: _xAnimation1,
+                  child: SlideTransition(
+                    position: _yAnimation1,
+                    child: const ImageBoxWidget(
+                      width: 80,
+                      height: 80,
+                      image: AppImages.personCycle1,
+                      color: AppColors.whiteBackgroundImage,
+                    ),
+                  ),
                 ),
               ),
               Positioned(
                 top: 80,
                 right: 90,
-                child: ImageBoxWidget(
-                  width: 90,
-                  height: 90,
-                  image: AppImages.personCycle2,
-                  color: AppColors.yellowBackgroundImage,
+                child: SlideTransition(
+                  position: _xAnimation2,
+                  child: SlideTransition(
+                    position: _yAnimation2,
+                    child: const ImageBoxWidget(
+                      width: 90,
+                      height: 90,
+                      image: AppImages.personCycle2,
+                      color: AppColors.yellowBackgroundImage,
+                    ),
+                  ),
                 ),
               ),
               Positioned(
                 right: 0,
                 bottom: 82,
-                child: ImageBoxWidget(
-                  width: 50,
-                  height: 50,
-                  image: AppImages.personCycle4,
-                  color: AppColors.greenBackgroundImage,
+                child: SlideTransition(
+                  position: _xAnimation4,
+                  child: SlideTransition(
+                    position: _yAnimation4,
+                    child: const ImageBoxWidget(
+                      width: 50,
+                      height: 50,
+                      image: AppImages.personCycle4,
+                      color: AppColors.greenBackgroundImage,
+                    ),
+                  ),
                 ),
               ),
               Positioned(
                 right: 30,
                 bottom: 0,
-                child: ImageBoxWidget(
-                  width: 68,
-                  height: 68,
-                  image: AppImages.personCycle5,
-                  color: AppColors.blueBackgroundImage,
+                child: SlideTransition(
+                  position: _xAnimation3,
+                  child: SlideTransition(
+                    position: _yAnimation3,
+                    child: const ImageBoxWidget(
+                      width: 68,
+                      height: 68,
+                      image: AppImages.personCycle5,
+                      color: AppColors.blueBackgroundImage,
+                    ),
+                  ),
                 ),
               ),
             ],
