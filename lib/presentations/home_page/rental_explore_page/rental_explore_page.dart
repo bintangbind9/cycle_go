@@ -460,7 +460,7 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
         children: [
           Container(
             width: screenWidth,
-            height: 200,
+            height: appBarHeight,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
@@ -558,6 +558,12 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
               itemBuilder: (context, index) {
                 Rental rental = rentals[index];
                 RgbColor color = rental.pictureBackgroundRgbColor!;
+                ImageBoxWidget imageBoxWidget = ImageBoxWidget(
+                  width: tileLeadingWidth,
+                  height: tileLeadingHeight,
+                  image: rental.picture!,
+                  color: Color.fromRGBO(color.r!, color.g!, color.b!, 1),
+                );
 
                 return GestureDetector(
                   onTap: () {
@@ -604,27 +610,20 @@ class _RentalExplorePageState extends State<RentalExplorePage> {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Stack(
-                              children: [
-                                ImageBoxWidget(
-                                  width: tileLeadingWidth,
-                                  height: tileLeadingHeight,
-                                  image: rental.picture!,
-                                  color: Color.fromRGBO(
-                                      color.r!, color.g!, color.b!, 1),
-                                ),
-                                Container(
-                                  width: tileLeadingWidth,
-                                  height: tileLeadingHeight,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.black.withOpacity(
-                                        rental.isOpen! ? 0.0 : 0.6),
-                                    borderRadius:
-                                        BorderRadius.circular(Styles.subRadius),
+                            rental.isOpen!
+                                ? imageBoxWidget
+                                : ClipRRect(
+                                    borderRadius: BorderRadius.circular(
+                                      Styles.subRadius,
+                                    ),
+                                    child: ColorFiltered(
+                                      colorFilter: const ColorFilter.mode(
+                                        AppColors.disable,
+                                        BlendMode.saturation,
+                                      ),
+                                      child: imageBoxWidget,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
                             Container(
                               padding: const EdgeInsets.all(16),
                               width: tileContentWidth,
